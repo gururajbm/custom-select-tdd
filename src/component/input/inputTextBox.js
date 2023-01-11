@@ -1,33 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './inputTextBox.css';
+import "./inputTextBox.css";
 
-const InputTextBox = ({inputValue, placeholder, handleOnChange, handleOnFocus}) => {
-
+const InputTextBox = ({
+  inputValue,
+  placeholder,
+  handleOnChange,
+  handleOnFocus,
+}) => {
   return (
-      <input
-        className="input-field"
-        data-test="component-InputTextBox"
-        type="text"
-        value={inputValue}
-        placeholder={placeholder}
-        onChange={handleOnChange}
-        onFocus={handleOnFocus}
-      ></input>
+    <input
+      className="input-field"
+      data-test="component-InputTextBox"
+      type="text"
+      value={inputValue}
+      placeholder={placeholder}
+      onChange={handleOnChange}
+      onFocus={handleOnFocus}
+    />
   );
 };
 
 InputTextBox.propTypes = {
-    inputValue: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
-    handleOnChange: PropTypes.func.isRequired,
-    handleOnFocus: PropTypes.func
+  inputValue: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  handleOnChange: PropTypes.func.isRequired,
+  handleOnFocus: PropTypes.func,
 };
 
 InputTextBox.defaultProps = {
-    inputValue: '',
-    placeholder: 'Please enter text',
+  inputValue: "",
+  placeholder: "Please enter text",
 };
 
 export default InputTextBox;
